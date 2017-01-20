@@ -5,6 +5,9 @@ using UnityEngine;
 public class Hop : MonoBehaviour {
 	float hopTime = 0.0f;
 
+	public float hopStrength = 300;
+	public float maxHopTime = 2.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,8 +22,8 @@ public class Hop : MonoBehaviour {
 
 	public void Jump() {
 		if (hopTime <= 0) {
-			GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
-			hopTime = 4.0f;
+			GetComponent<Rigidbody>().AddForce(Vector3.up * hopStrength);
+			hopTime = maxHopTime;
 		}
 	}
 }
