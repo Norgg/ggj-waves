@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94e37c33d240284391921046ef768b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boyantForce: 1
+  boyantForce: 2
   boyantHeight: 1
   angleClamp: 45
   flingForce: 2
