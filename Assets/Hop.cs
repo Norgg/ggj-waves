@@ -9,7 +9,7 @@ public class Hop : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		GetComponentInChildren<SkinnedMeshRenderer>().material.color = new Color(Random.value, Random.value, Random.value);
 	}
 	
 	// Update is called once per frame
