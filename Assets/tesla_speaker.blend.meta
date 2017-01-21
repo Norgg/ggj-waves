@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ca456e286c0c8244a82452449ec1109b
-timeCreated: 1484949061
+guid: 2e076cf976cb2eb478d029edddb5ef2d
+timeCreated: 1485017413
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
-    4300002: Surfboard
-    4300004: surfboard
+    4300000: tesla_speaker
     7400000: Default Take
     9500000: //RootNode
   materials:
