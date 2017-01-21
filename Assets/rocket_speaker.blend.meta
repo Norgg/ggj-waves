@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: fc1585bded50dce46bf4eae0542b7f3b
-timeCreated: 1485013170
+guid: 8c0aed8f4a8de8b4ca42c3ffff39445f
+timeCreated: 1485017276
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
-    4300002: stage
+    4300000: rocket_speaker
     7400000: Default Take
     9500000: //RootNode
   materials:

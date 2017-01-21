@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: fc1585bded50dce46bf4eae0542b7f3b
-timeCreated: 1485013170
+guid: d06056d4152dcb74787307506bceef97
+timeCreated: 1485017278
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
-    4300002: stage
+    4300000: tesla_speaker
     7400000: Default Take
     9500000: //RootNode
   materials:
