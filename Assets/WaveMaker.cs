@@ -4,40 +4,45 @@ using UnityEngine;
 
 public class WaveMaker : MonoBehaviour {
 
+	public float waveDuration = 5.0f;
+	public float waveSpeed = 0.1f;
 	float waveProgress = 0.0f;
 	bool waveStarted = false;
+	bool doWave = false;
 	Vector3 wavePos;
 
 	// Use this for initialization
 	void Start() {
 		
 	}
+
+	void Update() {
+		if (Input.GetButtonDown("Fire1")) {
+			doWave = true;
+		}
+	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetButtonDown("Fire1")) {
+	void FixedUpdate () {
+		if (doWave) {
+			doWave = false;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			Debug.Log("Click");
 			RaycastHit hitInfo;
 			if (Physics.Raycast(ray, out hitInfo)) {
 				StartWave(hitInfo.point);
-				Debug.Log("Hit");
 			}
 		}
 
 		if (waveStarted) {
-			waveProgress += 0.1f;
-			if (waveProgress > 5.0f) {
+			waveProgress += waveSpeed;
+			if (waveProgress > waveDuration) {
 				waveStarted = false;
 			}
 
-			Debug.Log(waveProgress);
-
 			foreach (Collider obj in Physics.OverlapSphere(wavePos, waveProgress)) {
 				Hop hop = obj.GetComponent<Hop>();
-				Debug.Log(obj);
 				if (hop != null) {
-					hop.Jump();
+					hop.Jump(1.0f - waveProgress / waveDuration);
 				}
 			}
 		}
