@@ -31,7 +31,7 @@ public class Surf : MonoBehaviour {
 		Vector3 angles = transform.eulerAngles;
 		angles.x = clampAngle(angles.x, angleClamp);
 		angles.z = clampAngle(angles.z, angleClamp);
-		transform.eulerAngles = angles;
+		//transform.eulerAngles = angles;
 	}
 
 	public void Fling(Vector3 direction) {

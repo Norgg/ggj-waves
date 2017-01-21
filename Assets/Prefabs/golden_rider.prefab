@@ -395,7 +395,7 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 1
-  m_SkinWidth: 0.01
+  m_SkinWidth: 0.2
   m_Mesh: {fileID: 4300004, guid: ca456e286c0c8244a82452449ec1109b, type: 3}
 --- !u!65 &65735511804742376
 BoxCollider:
@@ -432,9 +432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94e37c33d240284391921046ef768b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boyantForce: 3
+  boyantForce: 1
   boyantHeight: 1
-  angleClamp: 30
+  angleClamp: 45
   flingForce: 2
 --- !u!114 &114596596896500514
 MonoBehaviour:
