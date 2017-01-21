@@ -28,7 +28,6 @@ public class Respawn : MonoBehaviour {
 			lerpFac += lerpSpeed;
 
 			Vector3 target = Vector3.Lerp(targetPositions[0], targetPositions[1], lerpFac);
-			Debug.Log(target);
 
 			transform.position = target;
 			//rb.MovePosition(target);
@@ -39,19 +38,24 @@ public class Respawn : MonoBehaviour {
 			}
 		} else {
 			if (rb.isKinematic) {
+				transform.rotation = Quaternion.Euler(0, 0, 0);
 				rb.isKinematic = false;
 			}
 			if (transform.position.y < -4) {
+				transform.rotation = Quaternion.Euler(30, 0, 0);
 				targetPositions.Clear();
 				targetPositions.Add(transform.position);
 
 				Vector3 newPos = transform.position;
-				newPos.z += forwardAmount / 2;
+				newPos.z += forwardAmount * 0.4f;
+				newPos.y -= 2f;
 				targetPositions.Add(newPos);
 				
-				newPos.z += forwardAmount / 2;
+				newPos.z += forwardAmount * 0.5f;
+				newPos.y += 2f;
 				targetPositions.Add(newPos);
 
+				newPos.z += forwardAmount * 0.1f;
 				newPos.y = startPos.y;
 				targetPositions.Add(newPos);
 
