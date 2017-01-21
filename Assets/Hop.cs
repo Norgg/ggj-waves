@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Hop : MonoBehaviour {
-	float hopTime = 0.0f;
 
 	public float hopStrength = 300;
-	public float maxHopTime = 2.0f;
+	bool grounded;
 
 	// Use this for initialization
 	void Start () {
@@ -15,15 +14,23 @@ public class Hop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (hopTime > 0) {
-			hopTime -= Time.deltaTime;
+	}
+
+	public void Jump(float strength) {
+		if (grounded) {
+			GetComponent<Rigidbody>().AddForce(Vector3.up * hopStrength * strength);
 		}
 	}
 
-	public void Jump() {
-		if (hopTime <= 0) {
-			GetComponent<Rigidbody>().AddForce(Vector3.up * hopStrength);
-			hopTime = maxHopTime;
+	public void OnCollisionEnter(Collision other) {
+		if (other.collider.CompareTag("ground")) {
+			grounded = true;
+		}
+	}
+
+	public void OnCollisionExit(Collision other) {
+		if (other.collider.CompareTag("ground")) {
+			grounded = false;
 		}
 	}
 }

@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hopStrength: 400
-  maxHopTime: 2
+  maxHopTime: 1.08

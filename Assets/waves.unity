@@ -1588,6 +1588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705fea39518afd64fb35ff96e754f4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveDuration: 10
+  waveSpeed: 0.1
 --- !u!4 &462500590 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4341270141057292, guid: ff5d12ce6a17eac4b8379f52a5c6eed3,
@@ -5634,7 +5636,7 @@ GameObject:
   - component: {fileID: 1602588885}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

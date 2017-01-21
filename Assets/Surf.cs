@@ -17,7 +17,6 @@ public class Surf : MonoBehaviour {
 		GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * boyantForce, transform.position + transform.up * boyantHeight);
 
 		Vector3 angles = transform.eulerAngles;
-		Debug.Log(angles.y);
 		angles.x = clampAngle(angles.x, 15);
 		angles.z = clampAngle(angles.z, 15);
 		transform.eulerAngles = angles;
