@@ -14,6 +14,20 @@ public class Surf : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * boyantForce, transform.position + Vector3.up * boyantHeight);
+		GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * boyantForce, transform.position + transform.up * boyantHeight);
+
+		Vector3 angles = transform.eulerAngles;
+		Debug.Log(angles.y);
+		angles.x = clampAngle(angles.x, 15);
+		angles.z = clampAngle(angles.z, 15);
+		transform.eulerAngles = angles;
+	}
+
+	float clampAngle(float angle, float size) {
+		if (angle < 180) {
+			return Mathf.Min(angle, size);
+		} else {
+			return Mathf.Max(angle, 360 - size);
+		}
 	}
 }
