@@ -31,4 +31,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.blend1
+*.blend1.meta
 unnamed.mat*
