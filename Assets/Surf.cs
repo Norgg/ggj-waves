@@ -9,6 +9,9 @@ public class Surf : MonoBehaviour {
 	public float angleClamp = 25;
 	public float flingForce = 20;
 
+	bool won = false;
+	Vector3 victorySpin;
+
 	Rigidbody rb;
 
 	// Use this for initialization
@@ -18,6 +21,11 @@ public class Surf : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (won) {
+			transform.Rotate(victorySpin);
+			return;
+		}
+
 		rb.AddForceAtPosition(Vector3.up * boyantForce, transform.position + transform.up * boyantHeight);
 
 		Vector3 angles = transform.eulerAngles;
@@ -35,6 +43,16 @@ public class Surf : MonoBehaviour {
 			return Mathf.Min(angle, size);
 		} else {
 			return Mathf.Max(angle, 360 - size);
+		}
+	}
+
+	public void OnCollisionEnter(Collision other) {
+		if (other.collider.CompareTag("Stage")) {
+			victorySpin = rb.angularVelocity;
+
+			rb.isKinematic = true;
+			transform.parent = other.transform;
+			won = true;
 		}
 	}
 }
