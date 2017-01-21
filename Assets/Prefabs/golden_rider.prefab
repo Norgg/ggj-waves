@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4977806045969010}
   - component: {fileID: 198894653998165036}
   - component: {fileID: 199986196564289590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33840161042913206}
   - component: {fileID: 23442060186927314}
   - component: {fileID: 64620357857534330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4631333269363898}
   - component: {fileID: 54886675471486342}
   - component: {fileID: 114445159772973358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: golden_rider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 33090398893774162}
   - component: {fileID: 23263888365528946}
   - component: {fileID: 64921399592449804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: surfboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,10 +266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94e37c33d240284391921046ef768b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boyantForce: 0
+  boyantForce: 3
   boyantHeight: 2
-  angleClamp: 45
-  flingForce: 1
+  angleClamp: 30
+  flingForce: 3
 --- !u!198 &198894653998165036
 ParticleSystem:
   m_ObjectHideFlags: 1
