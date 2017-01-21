@@ -13,7 +13,11 @@ public class FollowCam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = player.transform.position + offset;
-		transform.LookAt(player.transform);
+		Vector3 pos = transform.position;
+		pos = player.transform.position + offset;
+		pos.x = 0;
+		transform.position = pos;
+
+		//transform.LookAt(player.transform);
 	}
 }

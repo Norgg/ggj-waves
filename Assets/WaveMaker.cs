@@ -39,10 +39,17 @@ public class WaveMaker : MonoBehaviour {
 				waveStarted = false;
 			}
 
+			float waveStrength = 1.0f - waveProgress / waveDuration;
+
 			foreach (Collider obj in Physics.OverlapSphere(wavePos, waveProgress)) {
 				Hop hop = obj.GetComponent<Hop>();
 				if (hop != null) {
-					hop.Jump(1.0f - waveProgress / waveDuration);
+					hop.Jump(waveStrength);
+				}
+
+				Surf surf = obj.GetComponentInParent<Surf>();
+				if (surf != null) {
+					surf.Fling((obj.transform.position - wavePos) * waveStrength);
 				}
 			}
 		}
