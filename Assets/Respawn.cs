@@ -10,10 +10,13 @@ public class Respawn : MonoBehaviour {
 	float lerpSpeed = 0.04f;
 	float forwardAmount = 28;
 
+	public float spawnRandomness = 0.5f;
+
 	Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
+		transform.position += new Vector3(spawnRandomness * (Random.value - 0.5f), 0, spawnRandomness * (Random.value - 0.5f));
 		startPos = transform.position;
 		rb = GetComponent<Rigidbody>();
 	}
