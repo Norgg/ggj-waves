@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - Stage
+  - Surfer
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Ground
   - Surfer
   - Stage
-  - 
+  - BG
   - 
   - 
   - 
