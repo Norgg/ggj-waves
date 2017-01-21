@@ -16,7 +16,7 @@ public class Respawn : MonoBehaviour {
 		if (transform.position.y < -4) {
 			Vector3 newPos = transform.position;
 			newPos.y = startPos.y;
-			newPos.z += 25;
+			newPos.z += 28;
 			transform.position = newPos;
 		}
 	}
