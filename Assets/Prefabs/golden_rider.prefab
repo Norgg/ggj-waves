@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 65773875525606484}
   - component: {fileID: 23801035398250244}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: quiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 65735511804742376}
   - component: {fileID: 23407735226982916}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
