@@ -27,7 +27,6 @@ public class Surf : MonoBehaviour {
 	}
 
 	public void Fling(Vector3 direction) {
-		Debug.Log("Flinging: " + direction);
 		rb.AddForce(direction.normalized * flingForce);
 	}
 

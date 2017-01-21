@@ -2524,37 +2524,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114445159772973358, guid: 495359a9afa325643ad558549f0dba0b,
-        type: 2}
-      propertyPath: flingForce
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114445159772973358, guid: 495359a9afa325643ad558549f0dba0b,
-        type: 2}
-      propertyPath: boyantForce
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114445159772973358, guid: 495359a9afa325643ad558549f0dba0b,
-        type: 2}
-      propertyPath: angleClamp
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1855781353672250, guid: 495359a9afa325643ad558549f0dba0b, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824827544202126, guid: 495359a9afa325643ad558549f0dba0b, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1944829051001742, guid: 495359a9afa325643ad558549f0dba0b, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1304734442147548, guid: 495359a9afa325643ad558549f0dba0b, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 495359a9afa325643ad558549f0dba0b, type: 2}
   m_IsPrefabParent: 0
@@ -8407,7 +8376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fc6f3643ca30d499645981abfd6196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.03
+  startSpeed: 0.005
+  maxSpeed: 0.04
+  accel: 0.00001
 --- !u!4 &1612839007 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4341270141057292, guid: ff5d12ce6a17eac4b8379f52a5c6eed3,
