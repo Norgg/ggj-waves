@@ -5,6 +5,11 @@ using UnityEngine;
 public class Hop : MonoBehaviour {
 
 	public float hopStrength = 300;
+	public float startRandomJumpChance = 0.0001f;
+	public float maxRandomJumpChance = 0.0005f;
+	public float randomJumpStrength = 0.5f;
+	float randomJumpChance;
+	float randomJumpChanceSpeed = 0.0000001f;
 	bool grounded;
 	Material material;
 
@@ -12,10 +17,15 @@ public class Hop : MonoBehaviour {
 	void Start () {
 		material = GetComponentInChildren<SkinnedMeshRenderer>().material;
 		material.color = new Color(Random.value, Random.value, Random.value);
+		randomJumpChance = startRandomJumpChance;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+		randomJumpChance += randomJumpChanceSpeed;
+		randomJumpChance = Mathf.Min(maxRandomJumpChance, randomJumpChance);
+		if (Random.value < randomJumpChance) {
+			Jump(Random.value * randomJumpStrength);
+		}
 	}
 
 	public void Jump(float strength) {
