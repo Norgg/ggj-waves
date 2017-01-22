@@ -6,12 +6,71 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: ankle_L
+    100004: ankle_R
+    100006: Armature
+    100008: chest
+    100010: foot_L
+    100012: foot_R
+    100014: hair_base
+    100016: hair_mid
+    100018: hand_L
+    100020: hand_R
+    100022: head
+    100024: hear_tip
+    100026: lower_arm_L
+    100028: lower_arm_R
+    100030: lower_leg_L
+    100032: lower_leg_R
+    100034: neck
+    100036: pelvis
+    100038: pompadour
+    100040: root
+    100042: spine
+    100044: thumb_L
+    100046: thumb_R
+    100048: upper_arm_L
+    100050: upper_arm_R
+    100052: upper_leg_L
+    100054: upper_leg_R
+    100056: wrist_L
+    100058: wrist_R
     400000: //RootNode
+    400002: ankle_L
+    400004: ankle_R
+    400006: Armature
+    400008: chest
+    400010: foot_L
+    400012: foot_R
+    400014: hair_base
+    400016: hair_mid
+    400018: hand_L
+    400020: hand_R
+    400022: head
+    400024: hear_tip
+    400026: lower_arm_L
+    400028: lower_arm_R
+    400030: lower_leg_L
+    400032: lower_leg_R
+    400034: neck
+    400036: pelvis
+    400038: pompadour
+    400040: root
+    400042: spine
+    400044: thumb_L
+    400046: thumb_R
+    400048: upper_arm_L
+    400050: upper_arm_R
+    400052: upper_leg_L
+    400054: upper_leg_R
+    400056: wrist_L
+    400058: wrist_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: pompadour
     7400000: Default Take
     9500000: //RootNode
+    13700000: pompadour
   materials:
     importMaterials: 1
     materialName: 0
