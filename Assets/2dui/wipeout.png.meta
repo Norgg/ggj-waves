@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: dbfefb20311ce134ba2b6fa4356ed453
-timeCreated: 1485095368
+guid: c986976728bf12d4aa4ce25f14e0fad8
+timeCreated: 1485093582
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: menu-play_0
-    21300002: menu-play_1
-    21300004: menu-play_2
+  fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -37,7 +34,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -87,46 +84,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: menu-play_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 199
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: menu-play_1
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 0
-        width: 199
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: menu-play_2
-      rect:
-        serializedVersion: 2
-        x: 398
-        y: 0
-        width: 199
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
