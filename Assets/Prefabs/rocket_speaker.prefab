@@ -57,6 +57,9 @@ GameObject:
   - component: {fileID: 23704637532518142}
   - component: {fileID: 95564968863819332}
   - component: {fileID: 64365185009788530}
+  - component: {fileID: 54063783165193586}
+  - component: {fileID: 114314860726069480}
+  - component: {fileID: 114412724236268100}
   m_Layer: 0
   m_Name: rocket_speaker
   m_TagString: Untagged
@@ -83,15 +86,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241842840596426}
-  m_LocalRotation: {x: -0.50794166, y: -0.49193016, z: -0.49193016, w: 0.50794166}
-  m_LocalPosition: {x: 13.75, y: 5.88, z: -11.6}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.64, y: 7.06, z: -11.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4079478128081414}
   - {fileID: 4358274014627634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -88.165}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90}
 --- !u!4 &4358274014627634
 Transform:
   m_ObjectHideFlags: 1
@@ -143,6 +146,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241842840596426}
   m_Mesh: {fileID: 4300000, guid: 8c0aed8f4a8de8b4ca42c3ffff39445f, type: 3}
+--- !u!54 &54063783165193586
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241842840596426}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64365185009788530
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -153,7 +171,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 8c0aed8f4a8de8b4ca42c3ffff39445f, type: 3}
@@ -174,6 +192,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114314860726069480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241842840596426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403472766a658bc44a1f1d8052b911e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114412724236268100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241842840596426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb502a091d49e6448b802a62e295d4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.03
 --- !u!198 &198600533639111028
 ParticleSystem:
   m_ObjectHideFlags: 1

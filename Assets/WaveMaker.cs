@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class WaveMaker : MonoBehaviour {
 
+	class Wave {
+		public Vector3 pos;
+		public float progress = 0;
+
+		public Wave(Vector3 pos) {
+			this.pos = pos;
+		}
+	}
+
 	public float waveDuration = 5.0f;
 	public float waveSpeed = 0.1f;
-	float waveProgress = 0.0f;
-	bool waveStarted = false;
 	bool doWave = false;
-	Vector3 wavePos;
+	List<Wave> waves = new List<Wave>();
+	int maxWaves = 3;
 
 	// Use this for initialization
 	void Start() {
@@ -33,15 +41,17 @@ public class WaveMaker : MonoBehaviour {
 			}
 		}
 
-		if (waveStarted) {
-			waveProgress += waveSpeed;
-			if (waveProgress > waveDuration) {
-				waveStarted = false;
+		List<Wave> done = new List<Wave>();
+
+		foreach (Wave wave in waves) {
+			wave.progress += waveSpeed;
+			if (wave.progress > waveDuration) {
+				done.Add(wave);
 			}
 
-			float waveStrength = 1.0f - waveProgress / waveDuration;
+			float waveStrength = 1.0f - wave.progress / waveDuration;
 
-			foreach (Collider obj in Physics.OverlapSphere(wavePos, waveProgress)) {
+			foreach (Collider obj in Physics.OverlapSphere(wave.pos, wave.progress)) {
 				Hop hop = obj.GetComponent<Hop>();
 				if (hop != null) {
 					hop.Jump(waveStrength);
@@ -49,15 +59,20 @@ public class WaveMaker : MonoBehaviour {
 
 				Surf surf = obj.GetComponentInParent<Surf>();
 				if (surf != null) {
-					surf.Fling((obj.transform.position - wavePos) * waveStrength);
+					surf.Fling((obj.transform.position - wave.pos) * waveStrength);
 				}
 			}
+		}
+
+		foreach (Wave wave in done) {
+			waves.Remove(wave);
 		}
 	}
 
 	void StartWave(Vector3 pos) {
-		waveStarted = true;
-		this.waveProgress = 0.0f;
-		this.wavePos = pos;
+		if (waves.Count > maxWaves) {
+			waves.RemoveAt(0);
+		}
+		waves.Add(new Wave(pos));
 	}
 }
