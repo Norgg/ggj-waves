@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Surf : MonoBehaviour {
 
@@ -8,8 +9,12 @@ public class Surf : MonoBehaviour {
 	public float boyantHeight = 2.0f;
 	public float angleClamp = 25;
 	public float flingForce = 20;
+	public GameObject score;
+
+	int menuTimer = 180;
 
 	bool won = false;
+	bool lost = false;
 	Vector3 victorySpin;
 
 	Rigidbody rb;
@@ -21,8 +26,24 @@ public class Surf : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (won || lost) {
+			menuTimer--;
+			if (menuTimer <= 0) {
+				SceneManager.LoadScene("menu");
+			}
+		}
+
 		if (won) {
 			transform.Rotate(victorySpin);
+			return;
+		}
+
+		if (lost) {
+			return;
+		}
+
+		if (transform.position.y < -10) {
+			lost = true;
 			return;
 		}
 
@@ -52,6 +73,9 @@ public class Surf : MonoBehaviour {
 
 			rb.isKinematic = true;
 			transform.parent = other.transform;
+			if (!won) {
+				score.GetComponent<Score>().Double();
+			}
 			won = true;
 		}
 	}

@@ -17,4 +17,8 @@ public class Score : MonoBehaviour {
 		score += player.GetComponent<Rigidbody>().velocity.magnitude/10.0f;
 		GetComponent<TextMesh>().text = "" + (int)score;
 	}
+
+	public void Double() {
+		score *= 2;
+	}
 }
