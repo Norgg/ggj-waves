@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 95665963104233742}
   - component: {fileID: 136328034156665284}
   - component: {fileID: 114138503492972198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: top_rider
-  m_TagString: Untagged
+  m_TagString: Surfer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
